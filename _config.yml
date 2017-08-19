@@ -1,8 +1,9 @@
 menu:
-  here: /
-  articles: /
-  RSS: /atom.xml
-  about: /
+  标题: /
+  文章: /
+  归档: /
+  关于: /
+  网志: /
 
 # google-analytics
 google_analytic: aaa
