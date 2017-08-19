@@ -1,0 +1,8 @@
+extends partial/layout
+
+block site_title
+    != page.title + " // " + config.title
+
+block description
+    - var desc = page.desc || page.title + ' - ' + config.title
+    meta(name="description", content=desc)

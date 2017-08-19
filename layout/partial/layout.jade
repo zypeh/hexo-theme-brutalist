@@ -1,0 +1,15 @@
+doctype
+html(lang=config.language)
+    head
+        include head
+    body
+        include scripts
+        .wrapper
+            header
+                block header
+
+            .side-nav
+                .side-nav-inner
+                    include nav
+            main
+                block container

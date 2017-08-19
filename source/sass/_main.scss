@@ -1,0 +1,119 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    text-size-adjust: none;
+    text-rendering: optimizeLegibility;
+    image-rendering: auto;
+    background: $background-color;
+}
+
+body {
+    margin: 0 auto 0;
+    background: $background-color;
+    color: $text-color;
+    font-family: $fontstack-default;
+    font-feature-settings: $font-feature;
+    font-size: $font-size;
+    transition: all .2s ease;
+}
+
+a {
+    color: $link-color;
+    text-decoration: underline;
+
+    &:hover {
+        background-position: 0 calc(100% - 2.5px);
+        background-size: auto 3px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-50%);}}%3C/style%3E%3Cpath fill='none' stroke='%23000' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+        padding-bottom: 3px;
+        background-repeat-x: repeat;
+        background-repeat-y: no-repeat;
+        text-decoration: none;
+    }
+}
+
+blockquote {
+    border-left: 40px solid $code-color;
+    color: #555;
+    font-size: .8rem;
+    padding: 0 0 0 20px;
+    margin: 40px 0;
+
+    background-position: 0 calc(100% - 2.5px);
+    background-size: auto 3px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-50%);}}%3C/style%3E%3Cpath fill='none' stroke='%23000' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    padding-bottom: 3px;
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+}
+
+em {
+    font-style: italic;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+h1, h2, h3, h4 {
+    color: #000;
+    font-family: $fontstack-default;
+    font-weight: 400;
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+        transition:
+            color .5s ease,
+            border-color .5s ease,
+            background .5s ease,
+            opacity 1.5s ease;
+        
+        &:hover, &:focus {
+            text-decoration: underline;
+            text-decoration-skip: ink;
+            transition:
+                color .5s ease,
+                border-color .1s ease,
+                background .1s ease,
+                opacity .1s ease;
+        }
+    }
+}
+
+img, video {
+    display: block;
+    height: auto;
+    margin: 20px 0;
+    max-width: 100%;
+}
+
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button, input, select[multiple], textarea {
+    background-image: none;
+}
+
+button {
+    appearance: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,10 @@
+menu:
+  here: /
+  articles: /
+  RSS: /atom.xml
+  about: /
+
+# google-analytics
+google_analytic: aaa
+
+startyear: 2017

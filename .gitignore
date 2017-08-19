@@ -1,0 +1,5 @@
+# The most heaviest object in the universe https://i.redd.it/tfugj4n3l6ez.png
+node_modules/
+
+# since we are publishing the sourcecode only
+yarn.lock

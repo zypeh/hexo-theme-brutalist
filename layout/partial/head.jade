@@ -1,0 +1,15 @@
+meta(charset="utf-8")
+meta(name="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width, initial-scale=1")
+
+link(rel="shortcut icon", href=url_for(theme.favicon), type="image/x-icon")
+link(rel="stylesheet", href=url_for("stylesheet/brutalist.css"))
+
+title
+    block site_title
+        = config.title
+block description
+    meta(name="description", content= config.description ? config.description : 'Skeptical')
+
+- var xml = config.url + '/atom.xml'
+    link(rel="search", href=xml, type="application/opensearchdescription+xml", title=config.title)

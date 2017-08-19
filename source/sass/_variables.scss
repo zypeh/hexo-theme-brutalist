@@ -1,0 +1,14 @@
+$fontstack-prefix: -apple-system, BlinkMacSystemFont;
+$fontstack-sans-serif: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Heletica Neue", sans-serif;
+$fontstack-serif: Georgia, serif;
+$fontstack-monospace: "Iosevka", monospace;
+
+$fontstack-default: $fontstack-prefix, $fontstack-sans-serif;
+$font-size: 1.6vw;
+$font-feature: "case", "ss01", "ss02";
+
+// colors
+$link-color: #42b983;
+$background-color: #fff;
+$text-color: #2c3e50;
+$code-color: #00cc80;
