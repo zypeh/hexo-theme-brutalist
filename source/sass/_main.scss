@@ -24,12 +24,17 @@ body {
     transition: all .2s ease;
 }
 
+p {
+    hyphens: auto;
+    margin: 20px 0;
+}
+
 a {
     color: $link-color;
     text-decoration: underline;
 
     &:hover {
-        background-position: 0 calc(100% - 2.5px);
+        background-position: 0 calc(100% - 1px);
         background-size: auto 3px;
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-50%);}}%3C/style%3E%3Cpath fill='none' stroke='%23000' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
         padding-bottom: 3px;
@@ -56,6 +61,36 @@ blockquote {
 
 em {
     font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+sub {
+    font-size: .85rem;
+    vertical-align: sub;
+}
+
+sup {
+    font-size: .85rem;
+    vertical-align: super;
+}
+
+pre {
+    background: #EFEFEF;
+    font-family: $fontstack-monospace;
+    font-size: .75rem;
+    line-height: 1.4em;
+    overflow: visible;
+    padding: 25px;
+
+    code {
+        background: transparent;
+        display: block;
+        border: 0;
+        padding: 0;
+    }
 }
 
 del {
@@ -116,4 +151,10 @@ button {
 .wrapper {
     display: flex;
     flex-direction: row;
+}
+
+.container {
+    margin-left: 50px;
+    margin-right: 50px;
+    flex: 1;
 }
