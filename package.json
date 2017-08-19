@@ -12,7 +12,7 @@
     "brutalist"
   ],
   "author": "zypeh <zypeh.geek@gmail.com>",
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
