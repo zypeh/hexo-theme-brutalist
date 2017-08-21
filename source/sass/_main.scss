@@ -25,8 +25,9 @@ body {
 }
 
 p {
+    line-height: 1.7;
     hyphens: auto;
-    margin: 20px 0;
+    margin: 4vh 0;
 }
 
 a {
@@ -154,11 +155,38 @@ button {
 }
 
 .container {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0 16vw 0 8vw;
     flex: 1;
 }
 
-.content {
-    max-width: 680px;
+footer {
+    width: 100%;
+    padding: 0 0 16vmin;
+    font-size: 75%;
+    text-align: center;
+    position: initial;
+
+    ul {
+        li {
+            display: inline;
+
+            &:after {
+                padding: 0 .6vw;
+                content: " | ";
+                opacity: .4;
+            }
+            &:last-of-type {
+                &:after {
+                    content: none;
+                }
+            }
+
+            a {
+                opacity: .4;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }

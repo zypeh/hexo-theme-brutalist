@@ -1,10 +1,10 @@
 .divider {
     border-bottom: 1px solid #DEDEDE;
-    margin: 1rem 0;
+    margin: 1rem auto;
 
     &-short {
         border-bottom: 1px solid #DEDEDE;
-        margin: 1rem 0;
+        margin: 1rem auto;
         width: 80%;
     }
 
@@ -15,6 +15,7 @@
         padding-bottom: 3px;
         background-repeat-x: repeat;
         background-repeat-y: no-repeat;
+        margin: 1rem auto;
 
         &-short {
             background-position: 0 calc(50%);
@@ -24,6 +25,7 @@
             background-repeat-x: repeat;
             background-repeat-y: no-repeat;
             width: 80%;
+            margin: 1rem auto;
         }
     }
 }
