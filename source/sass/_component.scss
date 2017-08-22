@@ -2,12 +2,6 @@
     border-bottom: 1px solid #DEDEDE;
     margin: 1rem auto;
 
-    &-short {
-        border-bottom: 1px solid #DEDEDE;
-        margin: 1rem auto;
-        width: 80%;
-    }
-
     &-curly {
         background-position: 0 calc(50%);
         background-size: auto 3px;
@@ -16,16 +10,9 @@
         background-repeat-x: repeat;
         background-repeat-y: no-repeat;
         margin: 1rem auto;
-
-        &-short {
-            background-position: 0 calc(50%);
-            background-size: auto 3px;
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-50%);}}%3C/style%3E%3Cpath fill='none' stroke='%23000' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-            padding-bottom: 3px;
-            background-repeat-x: repeat;
-            background-repeat-y: no-repeat;
-            width: 80%;
-            margin: 1rem auto;
-        }
     }
+}
+
+.divider.short, .divider-curly.short {
+    width: 80%;
 }

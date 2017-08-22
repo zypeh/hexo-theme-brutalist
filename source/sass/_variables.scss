@@ -8,7 +8,14 @@ $font-size: 1.6vw;
 $font-feature: "case", "ss01", "ss02";
 
 // colors
-$link-color: #42b983;
+$link-color: #384045;
 $background-color: #fff;
 $text-color: #2c3e50;
 $code-color: #00cc80;
+
+// breakpoints
+$breakpoint-lg: 1600px;
+$breakpoint-md: 1080px;
+$breakpoint-sm: 640px;
+$breakpoint-xs: 400px;
+$breakpoint-default: $breakpoint-md;
