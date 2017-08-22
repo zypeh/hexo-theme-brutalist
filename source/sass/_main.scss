@@ -27,7 +27,7 @@ body {
 p {
     line-height: 1.7;
     hyphens: auto;
-    margin: 4vh 0;
+    margin: 4vmin 0;
 }
 
 a {
@@ -130,7 +130,34 @@ h3 {
 h4, h5, h6 {
     font-weight: normal;
     opacity: .5;
-    font-size: 1.14rem;
+    font-size: 0.94rem;
+}
+
+ul, ol {
+    margin-bottom: 1.8rem;
+    list-style: none;
+    counter-reset: list;
+
+    @media(max-width: $breakpoint-sm) {
+        margin-left: 1em;
+    }
+
+    li {
+        &:before {
+            position: absolute;
+            display: inline-block;
+            width: 4em;
+            margin: 1px 0 0 -4em;
+            text-align: right;
+            opacity: .6;
+            pointer-events: none;
+        }
+
+        > ul, > ol  {
+            margin-left: 1em;
+            margin-bottom: 0;
+        }
+    }
 }
 
 img, video {
@@ -158,14 +185,19 @@ button {
     outline: none;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: row;
-}
-
-.container {
-    margin: 0 8vw 0 8vw;
-    flex: 1;
+header {
+    #title {
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+    }
+    #description {
+        p {
+            font-size: 1.3rem;
+            line-height: 1.4em;
+        }
+    }
 }
 
 main {
@@ -175,13 +207,17 @@ main {
 footer {
     width: 100%;
     padding: 0 0 16vmin;
-    font-size: 75%;
+    font-size: 2vmin;
     text-align: center;
     position: initial;
 
     ul {
         li {
             display: inline;
+
+            &:before {
+                content: "";
+            }
 
             &:after {
                 padding: 0 .6vw;

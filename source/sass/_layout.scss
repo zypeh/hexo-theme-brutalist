@@ -127,24 +127,42 @@ only screen and (max-width: $breakpoint-md) {
     }
 }
 
-header {
-    #title {
-        h1 {
-            margin: 0;
-            font-size: 3rem;
-        }
-    }
-    #description {
-        p {
-            font-size: 1.3rem;
-            line-height: 1.4em;
-        }
-    }
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    margin: 0 8vw 0 8vw;
+    flex: 1;
 }
 
 .content {
     p {
         line-height: 1.7em;
         font-size: 1rem;
+    }
+    
+    ul {
+        li {
+            padding-left: 1.14vmax;
+            margin-bottom: 1.5vmin;
+            &:before {
+                content: "•";
+                padding: 0 .6vmax;
+            }
+        }
+    }
+    
+    ol {
+        li {
+            padding-left: 1.54vmax;
+            margin-bottom: 1.5vmin;
+            &:before {
+                counter-increment: list;
+                content: counter(list) ".";
+                padding: 0 .6vmax;
+            }
+        }
     }
 }
