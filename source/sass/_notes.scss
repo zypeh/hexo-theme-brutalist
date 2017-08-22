@@ -1,0 +1,39 @@
+article {
+    figure {
+        max-width: 100%;
+        overflow: visible;
+        position: relative;
+    }
+
+    figcaption {
+        font-size: 1vw;
+        line-height: 1.5em;
+        padding: 1em 0 0 0;
+        position: absolute;
+        top: 0;
+        text-align: right;
+        left: -9vw;
+        width: 8vw;
+    }
+}
+
+@media handheld,
+only screen and (max-width: $breakpoint-md),
+only screen and (max-device-width: $breakpoint-md) {
+    article {
+        figure {
+            img, video {
+                display: block;
+                margin: 0 auto;
+            }
+
+            figcaption {
+                top: 0;
+                left: 0;
+                position: relative;
+                text-align: center;
+                width: auto;
+            }
+        }
+    }
+}

@@ -6,9 +6,6 @@ html(lang=config.language)
         .container
             //- include scripts
             .wrapper
-                header
-                    block header
-
                 .side-nav
                     .side-nav-inner
                         include nav
@@ -22,6 +19,8 @@ html(lang=config.language)
 
                 main(role="main")
                     .content
+                        header
+                            block header
                         block content
         footer
             include footer

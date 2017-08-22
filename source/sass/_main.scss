@@ -31,8 +31,11 @@ p {
 }
 
 a {
-    color: $link-color;
-    text-decoration: underline;
+    // color: $link-color;
+    // text-decoration: underline;
+    color: $text-color;
+    text-decoration: none;
+    border-bottom: 1px solid $text-color;
 
     &:hover {
         background-position: 0 calc(100% - 1px);
@@ -41,7 +44,9 @@ a {
         padding-bottom: 3px;
         background-repeat-x: repeat;
         background-repeat-y: no-repeat;
+        border: 0;
         text-decoration: none;
+        color: $text-color;
     }
 }
 
@@ -98,36 +103,40 @@ del {
     text-decoration: line-through;
 }
 
-h1, h2, h3, h4 {
-    color: #000;
+h1, h2, h3, h4, h5, h6 {
+    margin: 10vmin 0 1rem;
+    color: $text-color;
     font-family: $fontstack-default;
+    -webkit-font-smoothing: antialiased;
     font-weight: 400;
+    line-height: 1.1;
+}
 
-    a {
-        color: $text-color;
-        text-decoration: none;
-        transition:
-            color .5s ease,
-            border-color .5s ease,
-            background .5s ease,
-            opacity 1.5s ease;
-        
-        &:hover, &:focus {
-            text-decoration: underline;
-            text-decoration-skip: ink;
-            transition:
-                color .5s ease,
-                border-color .1s ease,
-                background .1s ease,
-                opacity .1s ease;
-        }
-    }
+h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+h4, h5, h6 {
+    font-weight: normal;
+    opacity: .5;
+    font-size: 1.14rem;
 }
 
 img, video {
     display: block;
     height: auto;
-    margin: 20px 0;
+    margin: 4vmin 0;
     max-width: 100%;
 }
 
@@ -155,8 +164,12 @@ button {
 }
 
 .container {
-    margin: 0 16vw 0 8vw;
+    margin: 0 8vw 0 8vw;
     flex: 1;
+}
+
+main {
+    padding-right: 8vw;
 }
 
 footer {

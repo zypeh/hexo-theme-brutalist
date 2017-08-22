@@ -1,6 +1,6 @@
 
 .content, .side-nav, .spacing {
-    margin-top: 50px;
+    margin-top: 8vmin;
     margin-bottom: 16vmin;
 }
 
@@ -19,7 +19,7 @@
         // fixed doesn't has a height, use `position: sticky` instead.
         // position: fixed;
         position: sticky;
-        top: 50px;
+        top: 8vmin;
     }
 
     nav {
@@ -30,13 +30,7 @@
         text-transform: uppercase;
 
         a {
-            color: $text-color;
-            text-decoration: none;
-
-            &:hover {
-                color: $text-color;
-                text-decoration: none;
-            }
+            border: 0;
         }
 
         ul {
@@ -67,6 +61,33 @@
     }
 }
 
+@media handheld,
+only screen and (max-width: $breakpoint-sm),
+only screen and (max-device-width: $breakpoint-sm) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .side-nav {
+        margin-top: 3vmin !important;
+
+        .side-nav-inner {
+            width: 100%;
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+                li {
+                    display: inline;
+
+                    &:first-child {
+                        margin: 1rem 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .spacing {
     .index {
         text-align: right;
@@ -93,5 +114,37 @@
                 }
             }
         }
+    }
+}
+
+@media handheld,
+only screen and (max-width: $breakpoint-md),
+only screen and (max-width: $breakpoint-md) {
+    .spacing {
+        float: none;
+        margin: 0;
+        min-width: 3vw;
+    }
+}
+
+header {
+    #title {
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+    }
+    #description {
+        p {
+            font-size: 1.3rem;
+            line-height: 1.4em;
+        }
+    }
+}
+
+.content {
+    p {
+        line-height: 1.7em;
+        font-size: 1rem;
     }
 }
