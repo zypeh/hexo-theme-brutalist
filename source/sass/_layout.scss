@@ -141,8 +141,13 @@ only screen and (max-width: $breakpoint-md) {
     p {
         line-height: 1.7em;
         font-size: 1rem;
+        // text-indent: 2em;
     }
     
+    ul, ol {
+        font-size: 1.1rem;
+    }
+
     ul {
         li {
             padding-left: 1.14vmax;
