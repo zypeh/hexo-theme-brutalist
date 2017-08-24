@@ -1,9 +1,7 @@
 menu:
-  标题: /
-  文章: /
-  归档: /
-  关于: /
-  网志: /
+  首页: /
+  归档: /archives
+  关于: /about
 
 # google-analytics
 google_analytic: aaa

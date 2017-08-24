@@ -61,11 +61,35 @@
     }
 }
 
+.index {
+    float: right;
+    margin: 0 2rem 0 2rem;
+    margin-top: 3vmin !important;
+    // This is similar to h3
+    &::before {
+        content: "目录";
+        color: $text-color;
+        line-height: 1.1;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+
+@media handheld,
+only screen and (max-width: $breakpoint-md),
+only screen and (max-width: $breakpoint-md) {
+    .spacing {
+        float: none;
+        margin: 0;
+        min-width: 3vw;
+    }
+}
+
 @media handheld,
 only screen and (max-width: $breakpoint-sm),
 only screen and (max-device-width: $breakpoint-sm) {
     .wrapper {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 
     .side-nav {
@@ -86,44 +110,17 @@ only screen and (max-device-width: $breakpoint-sm) {
             }
         }
     }
-}
-
-.spacing {
     .index {
-        text-align: right;
-        width: auto;
+        float: initial !important;
+        padding: 3vmin 0;
+    }
 
-        ul {
-            margin: 0;
-
-            a {
-                text-decoration: none;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-
-                &:visited {
-                    text-decoration: none;
-                }
-            }
-
-            li {
-                &:first-child {
-                    margin-top: -5px;
-                }
+    .side-nav {
+        .side-nav-inner {
+            .divider {
+                display: none;
             }
         }
-    }
-}
-
-@media handheld,
-only screen and (max-width: $breakpoint-md),
-only screen and (max-width: $breakpoint-md) {
-    .spacing {
-        float: none;
-        margin: 0;
-        min-width: 3vw;
     }
 }
 
@@ -138,12 +135,15 @@ only screen and (max-width: $breakpoint-md) {
 }
 
 .content {
-    p {
+    p, h6 {
         line-height: 1.7em;
         font-size: 1rem;
-        // text-indent: 2em;
     }
     
+    h6 {
+        text-indent: 2em;
+    }
+
     ul, ol {
         font-size: 1.1rem;
     }
