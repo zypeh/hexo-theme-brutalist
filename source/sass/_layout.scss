@@ -61,11 +61,35 @@
     }
 }
 
+.index {
+    float: right;
+    margin: 0 2rem 0 2rem;
+    margin-top: 3vmin !important;
+    // This is similar to h3
+    &::before {
+        content: "目录";
+        color: $text-color;
+        line-height: 1.1;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+
+@media handheld,
+only screen and (max-width: $breakpoint-md),
+only screen and (max-width: $breakpoint-md) {
+    .spacing {
+        float: none;
+        margin: 0;
+        min-width: 3vw;
+    }
+}
+
 @media handheld,
 only screen and (max-width: $breakpoint-sm),
 only screen and (max-device-width: $breakpoint-sm) {
     .wrapper {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 
     .side-nav {
@@ -86,65 +110,64 @@ only screen and (max-device-width: $breakpoint-sm) {
             }
         }
     }
-}
-
-.spacing {
     .index {
-        text-align: right;
-        width: auto;
+        float: initial !important;
+        padding: 3vmin 0;
+    }
 
-        ul {
-            margin: 0;
-
-            a {
-                text-decoration: none;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-
-                &:visited {
-                    text-decoration: none;
-                }
-            }
-
-            li {
-                &:first-child {
-                    margin-top: -5px;
-                }
+    .side-nav {
+        .side-nav-inner {
+            .divider {
+                display: none;
             }
         }
     }
 }
 
-@media handheld,
-only screen and (max-width: $breakpoint-md),
-only screen and (max-width: $breakpoint-md) {
-    .spacing {
-        float: none;
-        margin: 0;
-        min-width: 3vw;
-    }
+.wrapper {
+    display: flex;
+    flex-direction: row;
 }
 
-header {
-    #title {
-        h1 {
-            margin: 0;
-            font-size: 3rem;
-        }
-    }
-    #description {
-        p {
-            font-size: 1.3rem;
-            line-height: 1.4em;
-        }
-    }
+.container {
+    margin: 0 8vw 0 8vw;
+    flex: 1;
 }
 
 .content {
-    p {
+    p, h6 {
         line-height: 1.7em;
         font-size: 1rem;
+    }
+    
+    h6 {
+        text-indent: 2em;
+    }
+
+    ul, ol {
+        font-size: 1.1rem;
+    }
+
+    ul {
+        li {
+            padding-left: 1.14vmax;
+            margin-bottom: 1.5vmin;
+            &:before {
+                content: "•";
+                padding: 0 .6vmax;
+            }
+        }
+    }
+    
+    ol {
+        li {
+            padding-left: 1.54vmax;
+            margin-bottom: 1.5vmin;
+            &:before {
+                counter-increment: list;
+                content: counter(list) ".";
+                padding: 0 .6vmax;
+            }
+        }
     }
 }

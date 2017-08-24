@@ -14,6 +14,11 @@ html {
     background: $background-color;
 }
 
+::selection {
+    color: $code-color;
+    background: transparent;
+}
+
 body {
     margin: 0 auto 0;
     background: $background-color;
@@ -22,12 +27,30 @@ body {
     font-feature-settings: $font-feature;
     font-size: $font-size;
     transition: all .2s ease;
+
+    @media handheld,
+    only screen and (max-width: $breakpoint-md),
+    only screen and (max-device-width: $breakpoint-md) {
+        font-size: ($font-size * 1.4);
+    }
+
+    @media handheld,
+    only screen and (max-width: $breakpoint-md),
+    only screen and (max-device-width: $breakpoint-md) {
+        font-size: ($font-size * 2.4);
+    }
+
+    @media handheld,
+    only screen and (max-width: $breakpoint-xs),
+    only screen and (max-device-width: $breakpoint-xs) {
+        font-size: ($font-size * 3.2);
+    }
 }
 
-p {
+p, h6 {
     line-height: 1.7;
     hyphens: auto;
-    margin: 4vh 0;
+    margin: 4vmin 0;
 }
 
 a {
@@ -103,7 +126,7 @@ del {
     text-decoration: line-through;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
     margin: 10vmin 0 1rem;
     color: $text-color;
     font-family: $fontstack-default;
@@ -117,6 +140,11 @@ h1 {
     font-weight: bold;
 }
 
+h1.super {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
 h2 {
     font-size: 1.4rem;
     font-weight: normal;
@@ -127,10 +155,51 @@ h3 {
     font-weight: 600;
 }
 
-h4, h5, h6 {
-    font-weight: normal;
+h4, h5 {
     opacity: .5;
-    font-size: 1.14rem;
+    font-size: 0.94rem;
+}
+
+ul, ol {
+    margin-top: 1.2rem;
+    margin-bottom: 1.8rem;
+    list-style: none;
+    counter-reset: list;
+
+    @media(max-width: $breakpoint-sm) {
+        margin-left: 1em;
+    }
+
+    li {
+        &:before {
+            position: absolute;
+            display: inline-block;
+            width: 4em;
+            margin: 1px 0 0 -4em;
+            text-align: right;
+            opacity: .6;
+            pointer-events: none;
+        }
+
+        > ul, > ol  {
+            margin-left: 1em;
+            margin-bottom: 0;
+        }
+    }
+}
+
+ul.item-list {
+    li {
+        padding-left: 0;
+        &:before {
+            display: none;
+        }
+    }
+}
+
+time {
+    font-size: 85%;
+    color: #777;
 }
 
 img, video {
@@ -158,14 +227,19 @@ button {
     outline: none;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: row;
-}
-
-.container {
-    margin: 0 8vw 0 8vw;
-    flex: 1;
+header {
+    #title {
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+    }
+    #description {
+        p {
+            font-size: 1.3rem;
+            line-height: 1.4em;
+        }
+    }
 }
 
 main {
@@ -174,14 +248,18 @@ main {
 
 footer {
     width: 100%;
-    padding: 0 0 16vmin;
-    font-size: 75%;
+    padding: 0 0 16vmin 0;
+    font-size: 70%;
     text-align: center;
     position: initial;
 
     ul {
         li {
             display: inline;
+
+            &:before {
+                content: "";
+            }
 
             &:after {
                 padding: 0 .6vw;
@@ -203,3 +281,4 @@ footer {
         }
     }
 }
+
