@@ -298,13 +298,6 @@ only screen and (max-width: $breakpoint-sm) {
         #description p {
             font-size: 1.1rem;
         }
-    }
-}
-
-@media handheld,
-only screen and (max-width: $breakpoint-xs),
-only screen and (max-width: $breakpoint-xs) {
-    .content {
         #title h1 {
             font-size: 2rem;
         }

@@ -42,6 +42,16 @@ article {
 }
 
 @media handheld,
+only screen and (max-width: $breakpoint-sm),
+only screen and (max-width: $breakpoint-sm) {
+    article {
+        ul {
+            font-size: 0.86rem;
+        }
+    }
+}
+
+@media handheld,
 only screen and (max-width: $breakpoint-md),
 only screen and (max-device-width: $breakpoint-md) {
     article {
