@@ -1,4 +1,8 @@
 article {
+    p {
+        text-indent: 2em;
+    }
+
     a.linea {
         margin-left: 5px;
         opacity: .3 !important;
@@ -12,10 +16,12 @@ article {
     }
 
     figure {
+        text-indent: 2em;
+        font-size: 1rem;
+        line-height: 1.5em;
         max-width: 100%;
         overflow: visible;
         position: relative;
-        font-size: 75%;
     }
 
     figcaption {
@@ -28,6 +34,10 @@ article {
         left: -9vw;
         width: 8vw;
         opacity: .7;
+    }
+
+    ul li {
+        line-height: 1.5rem;
     }
 }
 
