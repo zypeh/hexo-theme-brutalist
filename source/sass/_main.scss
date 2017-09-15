@@ -166,10 +166,6 @@ ul, ol {
     list-style: none;
     counter-reset: list;
 
-    @media(max-width: $breakpoint-sm) {
-        margin-left: 1em;
-    }
-
     li {
         &:before {
             position: absolute;
@@ -249,7 +245,7 @@ main {
 footer {
     width: 100%;
     padding: 0 0 16vmin 0;
-    font-size: 70%;
+    font-size: 0.7rem;
     text-align: center;
     position: initial;
 
@@ -282,3 +278,38 @@ footer {
     }
 }
 
+@media handheld,
+only screen and (max-width: $breakpoint-md),
+only screen and (max-width: $breakpoint-md) {
+    .content {
+        article p {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media handheld,
+only screen and (max-width: $breakpoint-sm),
+only screen and (max-width: $breakpoint-sm) {
+    .content {
+        article p {
+            font-size: 0.86rem;
+        }
+        #description p {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media handheld,
+only screen and (max-width: $breakpoint-xs),
+only screen and (max-width: $breakpoint-xs) {
+    .content {
+        #title h1 {
+            font-size: 2rem;
+        }
+        #description p {
+            font-size: 1rem;
+        }
+    }
+}
