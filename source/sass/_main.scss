@@ -74,7 +74,7 @@ a {
 }
 
 blockquote {
-    border-left: 40px solid $code-color;
+    overflow: hidden;
     color: #555;
     font-size: .8rem;
     padding: 0 0 0 20px;
