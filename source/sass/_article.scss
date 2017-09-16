@@ -38,16 +38,158 @@ article {
 
     ul li {
         line-height: 1.5rem;
+        margin-left: 2em;
     }
 }
 
-@media handheld,
-only screen and (max-width: $breakpoint-sm),
-only screen and (max-width: $breakpoint-sm) {
-    article {
-        ul {
-            font-size: 0.86rem;
+code,
+pre {
+    font-size: 0.93em;
+    background-color: #f8f8f8;
+    font-family: "Iosevka";
+}
+
+.highlight {
+    position: relative;
+    margin: 1em 0;
+    border-radius: 2px;
+    line-height: 1.1em;
+    background-color: #f8f8f8;
+    overflow-x: auto;
+    
+    ::selection {
+        background: #5F615C;
+        color: #f8f8f8;
+    }
+
+    table, tr, td {
+        width: 100%;
+        border-collapse: collapse;
+        padding: 0;
+        margin: 0;
+    }
+    .gutter {
+        display: none;
+    }
+    .code pre {
+        padding: 1.2em 1.4em;
+        line-height: 1.5em;
+        margin: 0;
+        .line {
+            width: auto;
+            height: 18px;
         }
+    }
+}
+
+%code-base {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ccc;
+    text-align: right;
+    font-size: 0.75em;
+    padding: 5px 10px 0;
+    line-height: 15px;
+    height: 15px;
+    font-weight: 600;
+}
+
+pre {
+    color: #525252;
+    .comment {
+        color: #5F615C;
+        font-style: italic;
+    }
+    .type {
+        color: #A40000;
+    }
+    .function .keyword {
+        color: #204a87;
+        font-weight: 700;
+    }
+    .keyword .constant {
+       color: #8f5902;
+       font-style: italic;
+    }
+    .keyword, .attribute {
+        color: #CE5C00;
+    }
+    .number, .literal {
+        color: #C4A000;
+    }
+    .built_in {
+        color: #75507b;
+        font-style: bold;
+    }
+    .string {
+        color: #729FCF;
+        font-style: italic;
+    }
+    .tag,
+    .tag .title,
+    .change,
+    .winutils,
+    .flow,
+    .lisp .title,
+    .clojure,
+    .nginx .title,
+    .tex .special {
+        color: #3465A4;
+    }
+    .symbol,
+    .symbol .string,
+    .value,
+    .regexp {
+        color: #42b983;
+    }
+    .title {
+        color: #4e9a06;
+    }
+    .tag .value,
+    .subst,
+    .preprocessor,
+    .ruby .class .parent,
+    .sql .aggregate,
+    .django .template_tag,
+    .django .variable,
+    .smalltalk .class,
+    .javadoc,
+    .django .filter .argument,
+    .smalltalk .localvars,
+    .smalltalk .array,
+    .attr_selector,
+    .pseudo,
+    .addition,
+    .stream,
+    .envvar,
+    .apache .tag,
+    .apache .cbracket,
+    .tex .command,
+    .prompt {
+        color: #42b983;
+    }
+    .java .annotation,
+    .python .decorator,
+    .template_comment,
+    .pi,
+    .doctype,
+    .shebang,
+    .apache .sqbracket,
+    .tex .formula {
+        color: #b3b3b3;
+    }
+    .deletion {
+        color: #BA4545;
+    }
+    .coffeescript .javascript,
+    .javascript .xml,
+    .tex .formula,
+    .xml .javascript,
+    .xml .vbscript,
+    .xml .css,
+    .xml .cdata {
+        opacity: 0.5;
     }
 }
 

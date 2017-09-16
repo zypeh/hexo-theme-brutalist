@@ -282,8 +282,10 @@ footer {
 only screen and (max-width: $breakpoint-md),
 only screen and (max-width: $breakpoint-md) {
     .content {
-        article p {
-            font-size: 1rem;
+        article {
+            p, ul, figure {
+                font-size: 1rem;
+            }
         }
     }
 }
@@ -292,8 +294,10 @@ only screen and (max-width: $breakpoint-md) {
 only screen and (max-width: $breakpoint-sm),
 only screen and (max-width: $breakpoint-sm) {
     .content {
-        article p {
-            font-size: 0.86rem;
+        article {
+            p, ul, figure {
+                font-size: 0.86rem;
+            }
         }
         #description p {
             font-size: 1.1rem;
