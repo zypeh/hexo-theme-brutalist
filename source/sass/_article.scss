@@ -39,6 +39,10 @@ article {
     ul li {
         line-height: 1.5rem;
         margin-left: 2em;
+
+        p {
+            text-indent: 0;
+        }
     }
 }
 
@@ -78,6 +82,7 @@ pre {
         .line {
             width: auto;
             height: 18px;
+            margin-bottom: .18rem;
         }
     }
 }
