@@ -8,4 +8,8 @@ if ga
         | (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',
         != '"' + ga + '"'
         | ,'auto');ga('send','pageview');
-    
+
+script
+    | window.onscroll = function() {scrollFunction()};
+    | function scrollFunction(){if(document.body.scrollTop>320||document.documentElement.scrollTop>320){document.getElementById("gotoTop").className=""}else{document.getElementById("gotoTop").className="hidden"}}
+    | function gotoTop(){document.body.scrollTop = 0;document.documentElement.scrollTop=0}

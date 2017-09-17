@@ -1,0 +1,20 @@
+mixin share(article)
+    .share
+        ul 
+            br
+            span SHARE
+            .divider
+            li
+                - var link = "https://www.facebook.com/sharer/sharer.php?t=" + article.title
+                a(href=url_for(link), id="fb-share", target="_blank")
+                    i.facebook-icon
+                    .fb-share-info
+                        span.fb-share share
+                        //- span.fb-share--info 100
+            li
+                - var link = "https://twitter.com/intent/tweet?text=" + article.title
+                a(href=url_for(link), id="twitter-share", target="_blank")
+                    i.twitter-icon
+                    .tw-share-info
+                        span.tw-share tweet
+                        //- span.tw-share--info 200
