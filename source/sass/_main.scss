@@ -77,10 +77,13 @@ blockquote {
     overflow: hidden;
     color: #555;
     font-size: .8rem;
-    padding: 0 0 0 20px;
+    padding: 0 20px 0 20px;
     margin: 40px 0;
+    background-color: #F0F0F0;
+}
 
-    background-position: 0 calc(100% - 2.5px);
+hr {
+    border: none;
     background-size: auto 3px;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-50%);}}%3C/style%3E%3Cpath fill='none' stroke='%23000' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
     padding-bottom: 3px;
@@ -168,17 +171,18 @@ ul, ol {
 
     li {
         &:before {
+            line-height: 1.7em;
             position: absolute;
             display: inline-block;
             width: 4em;
-            margin: 1px 0 0 -4em;
+            margin: 0 0 0 -4em;
             text-align: right;
             opacity: .6;
             pointer-events: none;
         }
 
         > ul, > ol  {
-            margin-left: 1em;
+            margin-top: 1vmin;
             margin-bottom: 0;
         }
     }

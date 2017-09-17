@@ -9,7 +9,9 @@
 ## Installation;
 ```
 hexo init your-lovely-blog
-npm install --save hexo-renderer-jade hexo-toc
+cd your-lovely-blog
+npm uninstall --save hexo-renderer-marked
+npm install --save hexo-renderer-markdown-it hexo-renderer-jade hexo-toc markdown-it-footnote
 git clone https://github.com/zypeh/hexo-theme-brutalist.git themes/brutalist
 ```
 Change your `_config.yml` in order to look raw.
@@ -24,4 +26,29 @@ toc:
     symbol: ¶
     position: after
     style: linea
+
+# Markdown configurations
+markdown:
+  render:
+    html: true
+  plugins:
+    - markdown-it-footnote
+```
+
+### _Table of Content
+If you want to insert toc, just put a comment `<!-- toc -->` on your file.
+
+### Config()
+Edit `/themes/brutalist/_config.yml` in order to customize.
+
+```yaml
+menu:
+  首页: /
+  归档: /archives
+  关于: /about
+
+# google-analytics
+google_analytic: aaa
+
+startyear: 2017
 ```

@@ -16,7 +16,6 @@ article {
     }
 
     figure {
-        text-indent: 2em;
         font-size: 1rem;
         line-height: 1.5em;
         max-width: 100%;
@@ -44,6 +43,10 @@ article {
             text-indent: 0;
         }
     }
+
+    .footnote-ref {
+        margin-left: .13rem;
+    }
 }
 
 code,
@@ -59,7 +62,6 @@ pre {
     border-radius: 2px;
     line-height: 1.1em;
     background-color: #f8f8f8;
-    overflow-x: auto;
     
     ::selection {
         background: #5F615C;

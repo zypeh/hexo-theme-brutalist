@@ -1,5 +1,5 @@
 - var hexo_url = "https://hexo.io/";
-- var brutalist_url = "https://github.com/zypeh/hexo-theme-brutalist";
+- var theme_url = "https://github.com/zypeh/hexo-theme-brutalist";
 - var currentDate = new Date();
 - var year = currentDate.getFullYear();
 - year = year == theme.startyear ? year : theme.startyear + ' - ' + year;
@@ -7,9 +7,5 @@ p © #{year} #[a(href=config.url)!= config.author], powered by #[a(href=hexo_url
 ul
     li 
         a(href=config.url) home
-    li  
-        a(href="#") brutalist
-    li 
-        a(href="#") email
     li
-        a(href="#") atom
+        a(href="/atom.xml") atom

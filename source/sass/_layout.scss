@@ -166,4 +166,25 @@ only screen and (max-device-width: $breakpoint-sm) {
             }
         }
     }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-size: 90%;
+        width: 100%;
+        margin-left: -1.2vw;
+        margin-right: -1.2vw;
+        margin-bottom: 1.8rem;
+
+        th {
+            border-bottom: 2px solid rgba(0,0,0,.06);
+            text-align: center;
+            padding: .6em 1.2vw;
+        }
+
+        td {
+            border-top: 1px solid rgba(0,0,0,.04);
+            padding: .6em 1.2vw;
+        }
+    }
 }
