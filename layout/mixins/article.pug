@@ -1,0 +1,26 @@
+//- Index Page
+mixin articles()
+    ul.item-list
+        if page.posts
+            each item in page.posts.data
+                li
+                    h2
+                        a(href=url_for(item.path))
+                            != item.title
+                    time
+                        != full_date(item.date, 'll')
+                    p
+                        != item.description
+
+mixin article_header(article)
+    #title
+        h1
+            != article.title
+    #description
+        p
+            != article.description
+    .divider-curly
+
+mixin article_content(article)
+    article
+        != article.content
