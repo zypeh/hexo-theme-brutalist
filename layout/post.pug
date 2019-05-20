@@ -19,5 +19,6 @@ block layer
     include partial/gotoTop
 
 block share
-    include mixins/share
-    +share(page)
+    if theme.share_nav
+        include mixins/share
+        +share(page)
